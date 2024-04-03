@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
  * @author  POO
  * @version 03/2024
  */
-public class GroundTransportationTest {
+public class GroundTransportationTest{
     
     private GroundTransportation groundTransport;
 
