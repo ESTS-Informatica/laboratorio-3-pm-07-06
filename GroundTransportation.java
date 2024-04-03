@@ -42,7 +42,7 @@ public class GroundTransportation extends Transport
     @Override
     public String toString (){
         StringBuilder sb = new StringBuilder(super.toString());
-        sb.append(String.format("matricula: " + getLicensePlate()));
+        sb.append("matricula: " + getLicensePlate() + "\n");
         return sb.toString();
     }
 }

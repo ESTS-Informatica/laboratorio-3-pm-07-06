@@ -43,8 +43,8 @@ public class Lorry extends GroundTransportation
     @Override
     public String toString (){
         StringBuilder sb = new StringBuilder(super.toString());
-        sb.append(String.format("Numero de Paletes: " + getNumberOfPallets()));
-        sb.append(String.format("Numero de atrelados " + getTrailers()));
+        sb.append("Numero de Paletes: " + getNumberOfPallets() + "\n");
+        sb.append("Numero de atrelados " + getTrailers() + "\n");
         return sb.toString();
     }
     /**

@@ -37,7 +37,7 @@ public class AirTransportation extends Transport
     public int getNumberOfContainers(){
         return numberOfContainers;
     }
-    public void setContainers(int numberOfContainers){
+    public void setNumberOfContainers(int numberOfContainers){
         this.numberOfContainers = numberOfContainers;
     }
     public double getPriceWithFees(){
@@ -52,8 +52,8 @@ public class AirTransportation extends Transport
     @Override
     public String toString (){
         StringBuilder sb = new StringBuilder(super.toString());
-        sb.append(String.format("matricula: " + getName()));
-        sb.append(String.format("Numero de contentores: " + getNumberOfContainers()));
+        sb.append("matricula: " + getName() + "\n");
+        sb.append("Numero de contentores: " + getNumberOfContainers() + "\n");
         return sb.toString();
     }
 }

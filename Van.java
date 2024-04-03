@@ -34,7 +34,7 @@ public class Van extends GroundTransportation
     @Override
     public String toString (){
         StringBuilder sb = new StringBuilder(super.toString());
-        sb.append(String.format("Numero de Pacotes: " + getPackages()));
+        sb.append("Numero de Pacotes: " + getPackages() + "\n");
         return sb.toString();
     }
     /**
