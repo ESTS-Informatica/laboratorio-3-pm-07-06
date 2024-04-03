@@ -1,4 +1,4 @@
-
+import java.lang.StringBuilder;
 /**
  * Um meio de transporte genérico
  *
