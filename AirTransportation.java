@@ -43,8 +43,18 @@ public class AirTransportation extends Transport
     public double getPriceWithFees(){
         return getPrice() * airFee;
     }
+    
+    @Override
     public String getTransportType(){
         return "Air";
+    }
+    
+    @Override
+    public String toString (){
+        StringBuilder sb = new StringBuilder(super.toString());
+        sb.append(String.format("matricula: " + getName()));
+        sb.append(String.format("Numero de contentores: " + getNumberOfContainers()));
+        return sb.toString();
     }
 }
 

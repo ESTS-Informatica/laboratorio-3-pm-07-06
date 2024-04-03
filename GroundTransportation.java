@@ -1,4 +1,4 @@
-
+import java.lang.StringBuilder;
 /**
  * Escreva uma descrição da classe GroundTransportation aqui.
  * 
@@ -34,8 +34,16 @@ public class GroundTransportation extends Transport
     public double getPriceWithFees(){
         return getPrice() * fee;
     }
-    public String getTranportType(){
+    @Override
+    public String getTransportType(){
         return "Ground";
+    }
+    
+    @Override
+    public String toString (){
+        StringBuilder sb = new StringBuilder(super.toString());
+        sb.append(String.format("matricula: " + getLicensePlate()));
+        return sb.toString();
     }
 }
 
