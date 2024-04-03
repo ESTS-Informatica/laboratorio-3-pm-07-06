@@ -85,9 +85,9 @@ public class TransportTest {
                           "             ID: " + transport.getId() + "\n" +
                           "         Origem: \n" +
                           "        Destino: \n" +
-                          "          Preço:  0,00€\n" +
-                          "     Honorarios: 0,00%\n" +
-                          "    Preço Final: 0,00€\n";
+                          "          Preço:  0.00€\n" +
+                          "     Honorarios: 0.00%\n" +
+                          "    Preço Final: 0.00€\n";
         assertEquals(expected, transport.toString());
     }
 

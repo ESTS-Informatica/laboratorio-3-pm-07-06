@@ -43,20 +43,20 @@ public class ShippingCompany extends HashSet<Transport>
         }
         return sb.toString();
     }
-    private Transport getTransportation(String id){
+    public Transport getTransport(String id){
         for(Transport transport : this){
-            if(transport.getId() == id)return transport;
+            if(transport.getId().equals(id)){return transport;}
         }
         return null;
     }
-    private Transport getTransport(String id){
+    public Transport getTransportInService(String id){
         for(Transport transport : inService){
-            if(transport.getId() == id)return transport;
+            if(transport.getId().equals(id)){return transport;}
         }
         return null;
     }
     public void makeTransportation(String id, String origin, String destination, double price){
-           Transport transport = getTransportation(id);
+        Transport transport = getTransport(id);
         if(transport != null && transport.isAvailable()){
                 transport.setOrigin(origin);
                 transport.setDestination(destination);
@@ -64,24 +64,17 @@ public class ShippingCompany extends HashSet<Transport>
                 transport.setAvailable(false);
                 inService.add(transport);
                 this.remove(transport);
-            }
-        
+        }
     }
     public void finalizeTransportation(String id){
-        Transport transport = getTransport(id);
+        Transport transport = getTransportInService(id);
         if(transport != null){
-            inService.remove(transport);
             transport.setOrigin("");
             transport.setDestination("");
             transport.setPrice(0.0);
             transport.setAvailable(true);
             this.add(transport);
+            inService.remove(transport);
         }
     }
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
 }

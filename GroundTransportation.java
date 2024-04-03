@@ -18,12 +18,14 @@ public class GroundTransportation extends Transport
         // inicializa variáveis de instância
         super();
         this.licensePlate = "";
+        setFees(fee*100);
     }
     public GroundTransportation(String licensePlate)
     {
         // inicializa variáveis de instância
         super();
         this.licensePlate = licensePlate;
+        setFees(fee*100);
     }
     public String getLicensePlate(){
         return licensePlate;
@@ -32,17 +34,17 @@ public class GroundTransportation extends Transport
         this.licensePlate = licensePlate;
     }
     public double getPriceWithFees(){
-        return getPrice() * fee;
+        return getPrice() * (fee+1);
     }
     @Override
     public String getTransportType(){
-        return "Ground";
+        return "Transporte Terrestre";
     }
     
     @Override
     public String toString (){
         StringBuilder sb = new StringBuilder(super.toString());
-        sb.append("matricula: " + getLicensePlate() + "\n");
+        sb.append("      Matricula: " + getLicensePlate() + "\n");
         return sb.toString();
     }
 }

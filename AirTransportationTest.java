@@ -57,9 +57,9 @@ public class AirTransportationTest {
                 "             ID: " + airTransport.getId() + "\n" +
                 "         Origem: \n" +
                 "        Destino: \n" +
-                "          Preço:  0,00€\n" +
-                "     Honorarios: 4,00%\n" +
-                "    Preço Final: 0,00€\n" +
+                "          Preço:  0.00€\n" +
+                "     Honorarios: 4.00%\n" +
+                "    Preço Final: 0.00€\n" +
                 "           Nome: Boeing 747\n" +
                 "  NºContentores: 10\n";
         assertEquals(expected, airTransport.toString());

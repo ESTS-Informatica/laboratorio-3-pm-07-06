@@ -20,13 +20,15 @@ public class AirTransportation extends Transport
         super();
         this.name = "";
         this.numberOfContainers = 0;
+        setFees(airFee*100);
     }
-    public AirTransportation(String name, int NumberOfContainers)
+    public AirTransportation(String name, int numberOfContainers)
     {
         // inicializa variáveis de instância
         super();
         this.name = name;
         this.numberOfContainers = numberOfContainers;
+        setFees(airFee*100);
     }
     public String getName(){
         return name;
@@ -38,22 +40,24 @@ public class AirTransportation extends Transport
         return numberOfContainers;
     }
     public void setNumberOfContainers(int numberOfContainers){
-        this.numberOfContainers = numberOfContainers;
+        if(numberOfContainers>0){
+            this.numberOfContainers = numberOfContainers;
+        }
     }
     public double getPriceWithFees(){
-        return getPrice() * airFee;
+        return getPrice() * (airFee+1);
     }
     
     @Override
     public String getTransportType(){
-        return "Air";
+        return "Transporte Aereo";
     }
     
     @Override
     public String toString (){
         StringBuilder sb = new StringBuilder(super.toString());
-        sb.append("matricula: " + getName() + "\n");
-        sb.append("Numero de contentores: " + getNumberOfContainers() + "\n");
+        sb.append("           Nome: " + getName() + "\n");
+        sb.append("  NºContentores: " + getNumberOfContainers() + "\n");
         return sb.toString();
     }
 }
